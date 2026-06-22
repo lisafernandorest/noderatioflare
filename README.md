@@ -1,4 +1,4 @@
-# stack-trace-8349dc
+# stack-trace-d67af8
 
 A Rust stack-trace utility.
 
